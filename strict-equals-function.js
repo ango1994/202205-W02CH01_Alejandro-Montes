@@ -2,7 +2,7 @@ export function strictEquals(a, b) {
     if (isNaN(a) || isNaN(b)) {
         return false;
     }
-    if (Object.is(a * b, -0)) {
+    if (!a && !b) {
         return true;
     }
     return Object.is(a, b);
